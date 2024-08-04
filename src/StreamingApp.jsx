@@ -1,5 +1,11 @@
+import { AppRouter } from "./router/AppRouter"
+
 export const StreamingApp = () => {
     return (
-        <h1>StreamingApp</h1>
+        <>
+            <AppRouter />
+        </>
+
     )
+
 }
