@@ -6,7 +6,7 @@ export const useFetch = (url) => {
         data: false,
         isLoading: true,
         hasError: false,
-        error: false,
+        error: false
     });
 
     const getFetch = async () => {
@@ -15,7 +15,7 @@ export const useFetch = (url) => {
             data: false,
             isLoading: true,
             hasError: false,
-            error: false,
+            error: false
         });
 
         const resp = await fetch(url);
@@ -30,7 +30,7 @@ export const useFetch = (url) => {
                     message: resp.statusText,
                 }
             });
-            return;
+            return
         }
 
         const data = await resp.json();
@@ -39,7 +39,7 @@ export const useFetch = (url) => {
             data: data,
             isLoading: false,
             hasError: false,
-            error: false,
+            error: false
         });
     };
 
