@@ -7,20 +7,24 @@ export const StreamingPage = () => {
 
     const { data, isLoading, hasError } = useFetch(`${BASE_URL}/discover/movie?sort_by=popularity.desc&api_key=${API_KEY}`);
 
-    console.log(data, isLoading);
+
+    const { results } = data;
+    console.log(results);
+
 
     return (
         <>
-
-
             <h1>StreamingPage</h1>
-
             {isLoading && <p>Cargando...</p>}
+            {
+                results?.map((film) => (
+                    <div key={film.id}>
+                        <p >{film.original_title}</p>
+                        <img src={`${IMAGE_URL + film.poster_path}`} alt="No imagen" height={300} width={200} />
 
-
+                    </div>
+                ))
+            }
         </>
-
-
-
     )
 }
