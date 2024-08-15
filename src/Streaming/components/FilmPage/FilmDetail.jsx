@@ -1,5 +1,5 @@
 import { useParams } from "react-router-dom"
-import { BASE_URL, API_KEY, API_TOKEN } from "../../../../settings";
+import { BASE_URL, API_KEY, IMAGE_URL } from "../../../../settings";
 import { useFetch } from "../../hooks/useFetch";
 
 
@@ -19,6 +19,12 @@ export const FilmDetail = () => {
 
 
     return (
-        <h1>FilmDetail</h1>
+        <>
+            <h1>FilmDetail</h1>
+
+            <img src={`${IMAGE_URL + data.poster_path}`} alt="No imagen" height={300} width={200} />
+
+        </>
+
     )
 }
