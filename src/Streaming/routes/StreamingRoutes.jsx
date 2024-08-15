@@ -1,9 +1,9 @@
 import React from 'react'
-import { Route, Routes } from 'react-router-dom'
+import { Navigate, Route, Routes } from 'react-router-dom'
 import { StreamingPage } from '../components/StreamingPage/StreamingPage'
 import { FilmDetail } from '../components/FilmPage/FilmDetail'
-import { SearchPage } from '../components/SearchPage/SearchPage'
 import { Navbar } from './Navbar'
+
 
 export const StreamingRoutes = () => {
     return (
@@ -13,10 +13,10 @@ export const StreamingRoutes = () => {
 
             <Routes>
                 <Route path="/" element={<StreamingPage />} />
-                <Route path="search" element={<SearchPage />} />
                 <Route path="film/:id" element={<FilmDetail />} />
-            </Routes>
 
+                <Route path="film/" element={<Navigate to="/" />} />
+            </Routes>
         </>
     )
 }

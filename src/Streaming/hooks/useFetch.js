@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react'
 
 export const useFetch = (url) => {
 
-    console.log('useFetch: me cargo');
+
     const [state, setState] = useState({
         data: false,
         isLoading: true,
@@ -45,8 +45,6 @@ export const useFetch = (url) => {
     };
 
     useEffect(() => {
-
-        console.log('useFetch: me cargo fetch con useEfect');
         getFetch();
     }, [url]);
 
