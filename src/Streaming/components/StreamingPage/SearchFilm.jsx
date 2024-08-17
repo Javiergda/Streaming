@@ -14,15 +14,11 @@ export const SearchFilm = ({ setSearchUrl }) => {
 
     const handleClick = (e) => {
         e.preventDefault();
-
         setSearchUrl(`/search/movie?query=${searchText.trim()}&api_key=`);
     }
 
-
-    console.log(searchText);
-
     return (
-        <form>
+        <form className='searchFilm'>
             <input
                 type="text"
                 placeholder="Search a film"

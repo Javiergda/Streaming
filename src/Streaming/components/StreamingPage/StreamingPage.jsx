@@ -15,23 +15,31 @@ export const StreamingPage = () => {
 
     const { data, isLoading, hasError } = useFetch(`${BASE_URL}${searchUrl}${API_KEY}`);
     const { results: films } = data;
+    console.log(data);
 
     return (
-        <>
+        <div className='streamingPage'>
             <h1>StreamingPage</h1>
 
             <SearchFilm setSearchUrl={setSearchUrl} />
 
             {isLoading && <p>Cargando...</p>}
 
-            {
-                films?.map((film) => (
-                    <FilmCard
-                        key={film.id}
-                        {...film}
-                    />
-                ))
-            }
-        </>
+            <div className="wrapFilms">
+
+                {
+
+                    films?.map((film) => (
+                        <FilmCard
+                            key={film.id}
+                            {...film}
+                        />
+                    ))
+
+                }
+
+            </div>
+
+        </div>
     )
 }

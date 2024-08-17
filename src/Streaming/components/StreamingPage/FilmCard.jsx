@@ -6,9 +6,11 @@ export const FilmCard = ({ poster_path, original_title, id }) => {
 
 
     return (
-        <div>
+        <div className='filmCard'>
+
             <p >{original_title}</p>
-            <img src={`${IMAGE_URL + poster_path}`} alt="No imagen" height={300} width={200} />
+            <img src={`${IMAGE_URL + poster_path}`} alt="No imagen" />
+
             <Link to={`film/${id}`}>
                 ... mas info
             </Link>

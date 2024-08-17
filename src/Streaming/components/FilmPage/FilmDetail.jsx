@@ -25,16 +25,35 @@ export const FilmDetail = () => {
     }
 
     return (
-        <>
+        <div className="filmDetail">
             <h1>FilmDetail</h1>
 
-            <img src={`${IMAGE_URL + data.poster_path}`} alt="No imagen" height={300} width={200} />
+            <img src={`${IMAGE_URL + data.poster_path}`} alt="No imagen" />
+            <p>
+                <ul>
+                    <li>
+                        Titulo original: {data.original_title}
+                    </li>
+                    <li>
+                        Web: {data.homepage}
+                    </li>
+                    <li>
+                        Popularidad: {data.popularity}
+                    </li>
+                    <li>
+                        Fecha de lanzamiento: {data.release_date}
+                    </li>
+                </ul>
+
+            </p>
+
+
             <button
                 onClick={handleNavigateBack}
             >
                 Volver
             </button>
-        </>
+        </div>
 
     )
 }

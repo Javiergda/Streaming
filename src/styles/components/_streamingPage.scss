@@ -1,0 +1,15 @@
+.streamingPage {
+
+    background-color: grey;
+
+    .wrapFilms {
+        background-color: black;
+        margin: 5px;
+
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+}
