@@ -26,33 +26,44 @@ export const FilmDetail = () => {
 
     return (
         <div className="filmDetail">
-            <h1>FilmDetail</h1>
 
-            <img src={`${IMAGE_URL + data.poster_path}`} alt="No imagen" />
+
+            <img
+                src={`${IMAGE_URL + data.poster_path}`}
+                alt="No imagen"
+                className="animate__animated animate__fadeInLeft"
+            />
             <p>
+                <h3>{data.original_title}</h3>
                 <ul>
                     <li>
-                        Titulo original: {data.original_title}
+                        <b>Titulo original:</b>{data.original_title}
                     </li>
                     <li>
-                        Web: {data.homepage}
+                        <b>Web:</b>{data.homepage}
                     </li>
                     <li>
-                        Popularidad: {data.popularity}
+                        <b>Popularidad:</b>{data.popularity}
                     </li>
                     <li>
-                        Fecha de lanzamiento: {data.release_date}
+                        <b>Fecha de lanzamiento:</b>{data.release_date}
                     </li>
-                </ul>
 
+                </ul>
+                <h3>Resumen</h3>
+                <p>
+
+                    {data.overview}
+                </p>
+                <button
+                    onClick={handleNavigateBack}
+                >
+                    Volver
+                </button>
             </p>
 
 
-            <button
-                onClick={handleNavigateBack}
-            >
-                Volver
-            </button>
+
         </div>
 
     )

@@ -6,7 +6,7 @@ export const FilmCard = ({ poster_path, original_title, id }) => {
 
 
     return (
-        <div className='filmCard'>
+        <div className='filmCard animate__animated animate__fadeIn'>
 
             <p >{original_title}</p>
             <img src={`${IMAGE_URL + poster_path}`} alt="No imagen" />

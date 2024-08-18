@@ -4,6 +4,8 @@ import { StreamingApp } from './StreamingApp.jsx'
 import { BrowserRouter } from 'react-router-dom'
 
 import './styles/styles.scss'
+import 'animate.css';
+
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   // <React.StrictMode>
