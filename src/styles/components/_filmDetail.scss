@@ -1,21 +1,50 @@
 .filmDetail {
-    background-color: rgb(45, 59, 97);
+    background-color: $background;
     color: white;
     display: flex;
 
 
     img {
         width: 40%;
+        margin-left: 20px;
         //  height: 500px;
     }
 
     ul {
         font-size: 0.9rem;
-        padding: 0px;
+        padding: 10px;
 
         li {
             list-style-type: none;
+            margin-bottom: 2px;
         }
+    }
+
+    p {
+        margin-left: 15px;
+    }
+
+    section {
+        padding: 10px;
+    }
+
+    button {
+        padding: 5px 15px;
+        margin: 10px;
+        cursor: pointer;
+    }
+
+    h3 {
+        color: $titleh3;
+        padding: 5px;
+    }
+
+    a:visited {
+        color: white;
+    }
+
+    .loading {
+        font-size: 1.7rem;
     }
 
 }

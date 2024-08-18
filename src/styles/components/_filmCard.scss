@@ -1,14 +1,14 @@
 .filmCard {
-    background-color: grey;
+    background-color: $background;
     color: white;
-    margin: 10px;
+
+    border-radius: 0px;
+    margin: 14px 18px;
+    padding: 0px;
 
     display: flex;
     flex-direction: column;
     justify-content: center;
-
-    cursor: pointer;
-
 
     p {
         text-align: center;
@@ -17,8 +17,14 @@
     img {
         height: 300px;
         width: 200px;
-        align-self: center;
+        margin: 0px;
+        cursor: pointer;
+    }
 
+    a {
+        align-self: center;
+        align-tracks: center;
+        margin: 0px;
     }
 
 }

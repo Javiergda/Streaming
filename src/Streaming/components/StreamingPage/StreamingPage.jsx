@@ -19,11 +19,11 @@ export const StreamingPage = () => {
 
     return (
         <div className='streamingPage'>
-            <h1>StreamingPage</h1>
+
 
             <SearchFilm setSearchUrl={setSearchUrl} />
 
-            {isLoading && <p>Cargando...</p>}
+            {isLoading && <p className="loading">Cargando...</p>}
 
             <div className="wrapFilms">
 

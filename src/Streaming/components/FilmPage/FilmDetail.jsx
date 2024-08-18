@@ -26,43 +26,44 @@ export const FilmDetail = () => {
 
     return (
         <div className="filmDetail">
-
-
             <img
                 src={`${IMAGE_URL + data.poster_path}`}
                 alt="No imagen"
                 className="animate__animated animate__fadeInLeft"
             />
-            <p>
-                <h3>{data.original_title}</h3>
-                <ul>
-                    <li>
-                        <b>Titulo original:</b>{data.original_title}
-                    </li>
-                    <li>
-                        <b>Web:</b>{data.homepage}
-                    </li>
-                    <li>
-                        <b>Popularidad:</b>{data.popularity}
-                    </li>
-                    <li>
-                        <b>Fecha de lanzamiento:</b>{data.release_date}
-                    </li>
 
-                </ul>
-                <h3>Resumen</h3>
+
+            {isLoading ?
+                <p className="loading">Cargando...</p>
+                :
                 <p>
+                    <h3>{data.original_title}</h3>
+                    <ul>
+                        <li>
+                            <b>Titulo original: </b>{data.original_title}
+                        </li>
+                        <li>
+                            <b>Web: </b><a href={data.homepage}>{data.homepage}</a>
+                        </li>
+                        <li>
+                            <b>Popularidad: </b>{data.popularity}
+                        </li>
+                        <li>
+                            <b>Fecha de lanzamiento: </b>{data.release_date}
+                        </li>
 
-                    {data.overview}
+                    </ul>
+                    <h3>Resumen</h3>
+                    <section>
+                        {data.overview}
+                    </section>
+                    <button
+                        onClick={handleNavigateBack}
+                    >
+                        Volver
+                    </button>
                 </p>
-                <button
-                    onClick={handleNavigateBack}
-                >
-                    Volver
-                </button>
-            </p>
-
-
+            }
 
         </div>
 

@@ -1,16 +1,27 @@
 .streamingPage {
 
-    background-color: grey;
+    background-color: $background;
+    color: white;
+
 
     .wrapFilms {
-        background-color: rgb(45, 59, 97);
-        ;
-        margin: 5px;
+        background-color: $background;
+
+        margin: 0px;
 
         display: flex;
         flex-direction: row;
         flex-wrap: wrap;
         justify-content: center;
+    }
+
+    .loading {
+        font-size: 1.7rem;
+        text-align: center;
+    }
+
+    p {
+        margin-top: 20px;
     }
 
 }
