@@ -36,7 +36,7 @@ export const FilmDetail = () => {
             {isLoading ?
                 <p className="loading">Cargando...</p>
                 :
-                <p>
+                <div>
                     <h3>{data.original_title}</h3>
                     <ul>
                         <li>
@@ -62,7 +62,7 @@ export const FilmDetail = () => {
                     >
                         Volver
                     </button>
-                </p>
+                </div>
             }
 
         </div>

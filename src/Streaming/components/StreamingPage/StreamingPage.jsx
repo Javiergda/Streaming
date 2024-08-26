@@ -15,7 +15,7 @@ export const StreamingPage = () => {
 
     const { data, isLoading, hasError } = useFetch(`${BASE_URL}${searchUrl}${API_KEY}`);
     const { results: films } = data;
-    console.log(data);
+
 
     return (
         <div className='streamingPage'>

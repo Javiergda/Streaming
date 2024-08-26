@@ -1,5 +1,29 @@
+import { useNavigate } from "react-router-dom"
+
 export const LoginPage = () => {
+
+    const navigate = useNavigate();
+
+
+
+    const handleLogin = () => {
+        navigate('/', {
+            replace: true
+        });
+
+    }
+
     return (
-        <h1>LoginPage</h1>
+
+
+        <div className="loginPage">
+            <h1>Login Page</h1>
+
+            <button
+                onClick={handleLogin}
+            >
+                Login
+            </button>
+        </div>
     )
 }

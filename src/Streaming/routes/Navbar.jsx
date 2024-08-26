@@ -1,32 +1,37 @@
-import { Link, NavLink } from 'react-router-dom';
-
+import { Link, NavLink, useNavigate } from 'react-router-dom';
 
 export const Navbar = () => {
+
+    const navigate = useNavigate();
+
+    const handleLogout = () => {
+
+        navigate('/login', {
+            replace: true //evita regresar a la pagina anterior
+        });
+    }
+
     return (
         <nav className="navbar">
 
             <Link
-                className={({ isActive }) => `${isActive ? 'active' : ''}`}
+                //      className={({ isActive }) => `${isActive ? 'active' : ''}`}
                 to="/"
             >
                 Peliculas
             </Link>
 
             <div>
-                <NavLink
-                    className="logout"
-                    to="/login"
-                >
-                    <span>
-                        Javier García
-                    </span>
-                </NavLink>
+                <span>
+                    Javier García
+                </span>
 
-                <button>
+                <button
+                    onClick={handleLogout}
+                >
                     Logout
                 </button>
             </div>
-
 
         </nav>
     )
