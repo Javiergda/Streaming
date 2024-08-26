@@ -1,0 +1,21 @@
+.navbar {
+
+    display: flex;
+    justify-content: space-between;
+    margin: 10px 25px 10px 15px;
+    color: white;
+
+    span {
+        margin-right: 15px;
+        font-size: 0.9rem;
+    }
+
+
+
+    a:visited,
+    a:link {
+        color: white;
+        text-decoration: none;
+
+    }
+}
