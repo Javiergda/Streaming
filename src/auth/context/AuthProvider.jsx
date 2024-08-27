@@ -7,12 +7,18 @@ export const AuthProvider = ({ children }) => {
         logged: false,
         name: ''
     };
-
-
     const [user, setUser] = useState(initialState);
 
+    const login = (name = '') => {
+        setUser({
+            logged: true,
+            name: name
+        })
+
+    }
+
     return (
-        <AuthContext.Provider value={{}}>
+        <AuthContext.Provider value={{ user, login }}>
             {children}
         </AuthContext.Provider>
     )
