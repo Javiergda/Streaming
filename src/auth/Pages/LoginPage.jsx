@@ -11,7 +11,8 @@ export const LoginPage = () => {
 
     const handleLogin = () => {
 
-        login('Javier Garcia del Amo'); // llamamos al login del AuthProvider
+        login('Javier Garcia del Amo'); // llamamos al login del AuthProvider y mandamos nombre
+
 
         navigate('/', { // navegamos a ruta principal
             replace: true
