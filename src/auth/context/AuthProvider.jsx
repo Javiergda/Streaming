@@ -29,12 +29,6 @@ export const AuthProvider = ({ children }) => {
 
 
 
-
-    // Buscar en el local storage si el susuario ya está logeado
-
-    const usuario = JSON.parse(localStorage.getItem('user')); // Buscamos si existe
-
-    console.log(usuario);
     console.log(JSON.parse(localStorage.getItem('user')));
 
 
