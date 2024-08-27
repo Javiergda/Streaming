@@ -1,7 +1,8 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import { AuthContext } from './AuthContext'
 
 export const AuthProvider = ({ children }) => {
+
 
     const [user, setUser] = useState({ logged: false });
 
@@ -20,17 +21,15 @@ export const AuthProvider = ({ children }) => {
         localStorage.removeItem('user'); // Eliminamos local storage
     }
 
-
-    if (JSON.parse(localStorage.getItem('user'))) {
-
-    } else {
-
-    }
-
-
-
-    console.log(JSON.parse(localStorage.getItem('user')));
-
+    useEffect(() => {
+        const userName = JSON.parse(localStorage.getItem('user'))
+        if (userName) { // Comprobamos si el usuario esta en el local storage
+            setUser({
+                logged: true,
+                name: userName
+            })
+        }
+    }, [])
 
 
     return (
@@ -38,5 +37,4 @@ export const AuthProvider = ({ children }) => {
             {children}
         </AuthContext.Provider>
     )
-
 }

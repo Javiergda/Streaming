@@ -13,7 +13,7 @@ export const AppRouter = () => {
     return (
         <>
             <Routes>
-                <Route path="login" element={<LoginPage />} />
+                <Route path="login" element={!user.logged ? <LoginPage /> : <Navigate to='/' />} />
                 <Route path="/*" element={user.logged ? <StreamingRoutes /> : <Navigate to='login' />} />
             </Routes>
         </>
