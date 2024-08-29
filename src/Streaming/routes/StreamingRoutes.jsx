@@ -1,11 +1,12 @@
 import React from 'react'
-import { Navigate, Route, Routes } from 'react-router-dom'
+import { Navigate, Route, Routes, useLocation } from 'react-router-dom'
 import { StreamingPage } from '../components/StreamingPage/StreamingPage'
 import { FilmDetail } from '../components/FilmPage/FilmDetail'
 import { Navbar } from './Navbar'
 
 
 export const StreamingRoutes = () => {
+
     return (
 
         <>

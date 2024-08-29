@@ -3,7 +3,6 @@ import { AuthContext } from './AuthContext'
 
 export const AuthProvider = ({ children }) => {
 
-
     const [user, setUser] = useState({ logged: false });
 
     const login = (name = '') => {

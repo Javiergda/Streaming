@@ -1,5 +1,5 @@
 import { useContext } from 'react';
-import { Link, NavLink, useNavigate } from 'react-router-dom';
+import { Link, Navigate, NavLink, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../../auth/context/AuthContext';
 
 export const Navbar = () => {
@@ -18,7 +18,6 @@ export const Navbar = () => {
         <nav className="navbar">
 
             <Link
-                //      className={({ isActive }) => `${isActive ? 'active' : ''}`}
                 to="/"
             >
                 Peliculas

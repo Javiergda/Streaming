@@ -6,14 +6,12 @@ export const FilmDetail = () => {
 
     // Obtenemos el id pasada por parametros de la película enviada
     const { id } = useParams();
-    console.log(id);
 
     // Usamos el hook useNavigate para navegar entre paginas
     const navigate = useNavigate();
 
     // Obtenemos informacion detallada de la película enviada
     const { data, isLoading, hasError } = useFetch(`${BASE_URL}/movie/${id}?api_key=${API_KEY}`);
-    console.log(data, isLoading, hasError);
 
     // Si tenemos error corta el renderizado para que no de error y nos manda directamente a localhost
     if (hasError) {
